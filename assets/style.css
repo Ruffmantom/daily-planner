@@ -1,0 +1,180 @@
+body{
+    background-image: url('images/texture-wall-floor-stone-8892.png');
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Muli', sans-serif;
+        
+
+}
+/* Navbar */
+.navName{
+    font-size: 3em;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar{
+    padding: .5rem 5rem;
+}
+/* Sceen size nav ----------------------- */
+@media only screen and (max-width: 400px) {
+    .navbar {
+        padding: .5rem .9rem;
+    }
+  }
+
+/* First page custom styles */
+.title{
+    font-size: 2em;
+    border-bottom: 1px solid lightslategray;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+.imageMe{
+    width: 20%;
+    margin: 0 15px 5px 0;
+}
+.midsec{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #ffffff;
+    padding: 20px 15px;
+}
+/* Screen Size ----------------- */
+@media only screen and (max-width: 470px) {
+    .contentAboutMe{
+       text-align: center;
+    }
+    .imageMe{
+        width: 180px;
+        margin: 15px auto;
+    }
+
+  }
+/* End screen size ------------- */
+
+
+
+
+
+
+/* Second Page custom styles */
+
+
+
+
+
+/* Third Page custom styles */ 
+.galContent{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+}
+.img{
+    height: 150px;
+    width: 200px;
+    margin: 0 15px 20px 0;
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
+/* Screen Size ----------------- */
+@media only screen and (max-width: 470px) {
+    .img{
+        height: 150px;
+        width: 200px;
+        margin: 20px auto;
+        position: relative;
+        padding: 0;
+        overflow: hidden;
+    }
+  }
+/* End screen size ------------- */
+/* Portfolio images and divs */
+
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #000000bb;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.overlayBox{
+    margin: 0 auto;
+    height: 70%;
+    width: 60%;
+    background-color: #ffffffa1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 5px;
+}
+.overlayText{
+    margin: auto;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 1000px){
+    .overlay:hover{
+        cursor: pointer;
+        opacity: 1;  
+        
+    }
+    
+}
+.imgOne{
+    background-image: url('images/passGenTwo.png');
+
+}
+.imgTwo{
+    background-image: url('images/pic-two.jpg');
+}
+.imgThree{
+    background-image: url('images/pic-three.jpg');
+}
+.imgFour{
+    background-image: url('images/pic-four.jpg');
+}
+.imgFive{
+    background-image: url('images/pic-five.jpg');
+}
+.imgTitle{
+    width: 100%;
+    background-color: #000000bb;
+    position: absolute;
+    bottom: 8px;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+/* footer custom styles */
+.footer{
+    /* margin-top: auto; */
+    margin:auto 0 0 0;
+    text-align: center;
+    /* position: fixed; */
+    bottom: 0;
+    z-index: 0;
+    background-color: #666666;
+    color: #ffffff;
+    height: 60px;
+    border-top: 5px solid #000000;
+}
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Muli', sans-serif; */

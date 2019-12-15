@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Daily Planner</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/dailyStyles.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- font awesome -->
+
+</head>
+
+<body>
+    <!-- jquery  -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fadfd5f803.js" crossorigin="anonymous"></script>
+    <!-- my script -->
+    <script src="dailyscript.js"></script>
+
+    <!--******************* Header and navigation ***************************-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand navName" href="index.html">RWD</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end myNav" id="navbarNav">
+            <ul class="navbar-nav myNavUl">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">About Me <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="portfolio.html">Portfolio</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--******************* daily planner body ***************************-->
+    <div class='container'>
+        <div class="jumbotron jomboDiv">
+            <h1 id="daily-title">Your Daily Planner</h1>
+            <!-- Row 1 -->
+            <div class="row row1">
+                <div class="col-md-1 my-col hour-col">
+                    <p class="hour " id="hour-9">9:00am</p>
+                </div>
+                <div class="col-md-10 my-col">
+                    <input class="user-input" type="text">
+                </div>
+                <div class="col-md-1 my-col">
+                    <button class="save-btn" type="submit"><i class="fas fa-save"></i></button>
+                </div>
+            </div>
+            <!-- Row 2 -->
+
+            <div class="row row2">
+                <div class="col-md-1 my-col hour-col">
+                    <p class="hour" id="hour-10">10:00am</p>
+                </div>
+                <div class="col-md-10 my-col">
+                    <input class="user-input" type="text">
+                </div>
+                <div class="col-md-1 my-col">
+                    <button class="save-btn" type="submit"><i class="fas fa-save"></i></button>
+                </div>
+            </div>
+            <!-- Row 3 -->
+
+            <div class="row row3">
+                <div class="col-md-1 my-col hour-col">
+                    <p class="hour" id="hour-11">11:00am</p>
+                </div>
+                <div class="col-md-10 my-col">
+                    <input class="user-input" type="text">
+                </div>
+                <div class="col-md-1 my-col">
+                    <button class="save-btn" type="submit"><i class="fas fa-save"></i></button>
+                </div>
+            </div>
+            <!-- Row 4 -->
+
+            <div class="row row4">
+                <div class="col-md-1 my-col hour-col">
+                    <p class="hour" id="hour-12">12:00pm</p>
+                </div>
+                <div class="col-md-10 my-col">
+                    <input class="user-input" type="text">
+                </div>
+                <div class="col-md-1 my-col">
+                    <button class="save-btn" type="submit"><i class="fas fa-save"></i></button>
+                </div>
+            </div>
+            <!-- Row 5 -->
+
+            <div class="row row5">
+                <div class="col-md-1 my-col hour-col">
+                    <p class="hour" id="hour-1">1:00pm</p>
+                </div>
+                <div class="col-md-10 my-col">
+                    <input class="user-input" type="text">
+                </div>
+                <div class="col-md-1 my-col">
+                    <button class="save-btn" type="submit"><i class="fas fa-save"></i></button>
+                </div>
+            </div>
+            <!-- Row 6 -->
+
+            <div class="row row6">
+                <div class="col-md-1 my-col hour-col">
+                    <p class="hour" id="hour-2">2:00pm</p>
+                </div>
+                <div class="col-md-10 my-col">
+                    <input class="user-input" type="text">
+                </div>
+                <div class="col-md-1 my-col">
+                    <button class="save-btn" type="submit"><i class="fas fa-save"></i></button>
+                </div>
+            </div>
+            <!-- Row 7 -->
+
+            <div class="row row7">
+                <div class="col-md-1 my-col hour-col">
+                    <p class="hour" id="hour-3">3:00pm</p>
+                </div>
+                <div class="col-md-10 my-col">
+                    <input class="user-input" type="text">
+                </div>
+                <div class="col-md-1 my-col">
+                    <button class="save-btn" type="submit"><i class="fas fa-save"></i></button>
+                </div>
+            </div>
+            <!-- Row 8 -->
+
+            <div class="row row8">
+                <div class="col-md-1 my-col hour-col">
+                    <p class="hour" id="hour-4">4:00pm</p>
+                </div>
+                <div class="col-md-10 my-col">
+                    <input class="user-input" type="text">
+                </div>
+                <div class="col-md-1 my-col">
+                    <button class="save-btn" type="submit"><i class="fas fa-save"></i></button>
+                </div>
+            </div>
+            <!-- Row 9 -->
+
+            <div class="row row9">
+                <div class="col-md-1 my-col hour-col">
+                    <p class="hour" id="hour-5">5:00pm</p>
+                </div>
+                <div class="col-md-10 my-col">
+                    <input class="user-input" type="text">
+                </div>
+                <div class="col-md-1 my-col">
+                    <button class="save-btn" type="submit"><i class="fas fa-save"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--******************* footer ***************************-->
+    <div class="row navbar sticky-bottom text-center footer">
+        <div class=" col-md-12 foot justify-content-center">
+            <p>© copyright</p>
+        </div>
+    </div>
+    <!-- moment js for time -->
+    <script src="moment.js"></script>
+    <!-- bootstrap CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
