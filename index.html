@@ -22,6 +22,8 @@
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/fadfd5f803.js" crossorigin="anonymous"></script>
+    <!-- moment js for time -->
+    <script src="moment.js"></script>
     <!-- my script -->
     <script src="dailyscript.js"></script>
 
@@ -51,14 +53,14 @@
     <div class='container'>
         <div class="jumbotron jomboDiv">
             <h1 id="daily-title">Your Daily Planner</h1>
-            <h3 id="date"></h3>
+            <h4 id="date" style="margin-bottom: 15px;"></h4>
             <!-- Row 1 -->
             <div class="row row1">
                 <div class="col-md-1 my-col hour-col">
-                    <p class="hour " id="hour-9">9:00am</p>
+                    <p class="hour " id="hour-9">9:00 AM</p>
                 </div>
                 <div class="col-md-10 my-col">
-                    <input class="user-input" type="text">
+                    <input class="user-input input-One" type="text">
                 </div>
                 <div class="col-md-1 my-col">
                     <button class="save-btn" type="submit"><i class="fas fa-save"></i></button>
@@ -68,10 +70,10 @@
 
             <div class="row row2">
                 <div class="col-md-1 my-col hour-col">
-                    <p class="hour" id="hour-10">10:00am</p>
+                    <p class="hour" id="hour-10">10:00 AM</p>
                 </div>
                 <div class="col-md-10 my-col">
-                    <input class="user-input" type="text">
+                    <input class="user-input input-Two" type="text">
                 </div>
                 <div class="col-md-1 my-col">
                     <button class="save-btn" type="submit"><i class="fas fa-save"></i></button>
@@ -81,10 +83,10 @@
 
             <div class="row row3">
                 <div class="col-md-1 my-col hour-col">
-                    <p class="hour" id="hour-11">11:00am</p>
+                    <p class="hour" id="hour-11">11:00 AM</p>
                 </div>
                 <div class="col-md-10 my-col">
-                    <input class="user-input" type="text">
+                    <input class="user-input input-Three" type="text">
                 </div>
                 <div class="col-md-1 my-col">
                     <button class="save-btn" type="submit"><i class="fas fa-save"></i></button>
@@ -94,10 +96,10 @@
 
             <div class="row row4">
                 <div class="col-md-1 my-col hour-col">
-                    <p class="hour" id="hour-12">12:00pm</p>
+                    <p class="hour" id="hour-12">12:00 PM</p>
                 </div>
                 <div class="col-md-10 my-col">
-                    <input class="user-input" type="text">
+                    <input class="user-input input-Four" type="text">
                 </div>
                 <div class="col-md-1 my-col">
                     <button class="save-btn" type="submit"><i class="fas fa-save"></i></button>
@@ -107,10 +109,10 @@
 
             <div class="row row5">
                 <div class="col-md-1 my-col hour-col">
-                    <p class="hour" id="hour-1">1:00pm</p>
+                    <p class="hour" id="hour-1">1:00 PM</p>
                 </div>
                 <div class="col-md-10 my-col">
-                    <input class="user-input" type="text">
+                    <input class="user-input input-Five" type="text">
                 </div>
                 <div class="col-md-1 my-col">
                     <button class="save-btn" type="submit"><i class="fas fa-save"></i></button>
@@ -120,10 +122,10 @@
 
             <div class="row row6">
                 <div class="col-md-1 my-col hour-col">
-                    <p class="hour" id="hour-2">2:00pm</p>
+                    <p class="hour" id="hour-2">2:00 PM</p>
                 </div>
                 <div class="col-md-10 my-col">
-                    <input class="user-input" type="text">
+                    <input class="user-input input-Six" type="text">
                 </div>
                 <div class="col-md-1 my-col">
                     <button class="save-btn" type="submit"><i class="fas fa-save"></i></button>
@@ -133,10 +135,10 @@
 
             <div class="row row7">
                 <div class="col-md-1 my-col hour-col">
-                    <p class="hour" id="hour-3">3:00pm</p>
+                    <p class="hour" id="hour-3">3:00 PM</p>
                 </div>
                 <div class="col-md-10 my-col">
-                    <input class="user-input" type="text">
+                    <input class="user-input input-Seven" type="text">
                 </div>
                 <div class="col-md-1 my-col">
                     <button class="save-btn" type="submit"><i class="fas fa-save"></i></button>
@@ -146,10 +148,10 @@
 
             <div class="row row8">
                 <div class="col-md-1 my-col hour-col">
-                    <p class="hour" id="hour-4">4:00pm</p>
+                    <p class="hour" id="hour-4">4:00 PM</p>
                 </div>
                 <div class="col-md-10 my-col">
-                    <input class="user-input" type="text">
+                    <input class="user-input input-Eight" type="text">
                 </div>
                 <div class="col-md-1 my-col">
                     <button class="save-btn" type="submit"><i class="fas fa-save"></i></button>
@@ -159,10 +161,10 @@
 
             <div class="row row9">
                 <div class="col-md-1 my-col hour-col">
-                    <p class="hour" id="hour-5">5:00pm</p>
+                    <p class="hour" id="hour-5">5:00 PM</p>
                 </div>
                 <div class="col-md-10 my-col">
-                    <input class="user-input" type="text">
+                    <input class="user-input input-Nine" type="text">
                 </div>
                 <div class="col-md-1 my-col">
                     <button class="save-btn" type="submit"><i class="fas fa-save"></i></button>
@@ -179,8 +181,7 @@
             <p>© copyright</p>
         </div>
     </div>
-    <!-- moment js for time -->
-    <script src="moment.js"></script>
+
     <!-- bootstrap CDN -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"

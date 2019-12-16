@@ -27,8 +27,9 @@ input{
    
 }
 .hour{
- text-align: right;
- margin: auto 10px auto 0;
+    font-size: 10px;
+    text-align: right;
+    margin: auto 10px auto 0;
 }
 .my-col{
     height: 100%;
@@ -44,4 +45,11 @@ input{
 .save-btn{
     height: 100%;
     width: 75%;
+    color: #D7DADB;
+    background-color: #6DBCDB;
+    border: none;
+    border-radius: 0px 7px 7px 0px;
+}
+.save-btn:hover{
+    background-color: #2C3E50;
 }
