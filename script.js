@@ -1,11 +1,6 @@
 $(document).ready(function () {
     // code below this
     var description = $('.description');
-    // var time = moment().hours();
-    // console.log(time);
-
-    var saved = localStorage.getItem('task');
-    console.log(saved)
 
     // when the button gets clicked
     $('.saveBtn').on('click', function () {
@@ -101,6 +96,5 @@ $(document).ready(function () {
 
     hoursUpdater();
     var interval = setInterval(hoursUpdater, 15000);
-
     // dont code below this
 });
