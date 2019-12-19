@@ -8,7 +8,6 @@ $(document).ready(function () {
         generateKey()
 
     })
-    description.text(saved)
 
     // function for creating keys with every click
     function generateKey() {
