@@ -1,13 +1,27 @@
 $(document).ready(function () {
     // code below this
     var description = $('.description');
+    // display current day
+    var currentDay = $('#currentDay');
+    currentDay.text('Today is ' + moment().format("MMM Do YY"))
 
     // when the button gets clicked
     $('.saveBtn').on('click', function () {
         // want it to get the data in the input and save it to a new key
         generateKey()
-
+        // Riley Helped me make this way shorter -__- 
+        // var key = $(this).siblings()[1];
+        // // console.log(key);
+        // key = $(key).attr('id')
+        // var comment = $("#" + key).val();
+        // // console.log(key);
+        // localStorage.setItem(key, comment);
+        // comment.val(localStorage.getItem(key))
     })
+
+    // function printTasks(){
+    //     localStorage.getItem(key, comment);
+    // }
 
     // function for creating keys with every click
     function generateKey() {
@@ -67,7 +81,7 @@ $(document).ready(function () {
 
     // function for updating page 
     function hoursUpdater() {
-        print();
+        // print();
         var currentHour = moment().hours();
         $('.time-block').each(function () {
             // console.log('timeblock is working')// ran 9 times cause there are 9 divs with the class of "time-block"
