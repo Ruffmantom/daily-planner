@@ -5,9 +5,9 @@ This app uses local storage to save values that are in the text areas and be abl
 
 ## App showing the background colors for paste, present and future
 I had to switch the times so that I could capture the functionality
-![this is the app with the past, present, and future background colors](./assets/images/colors.png)
+![this is the app with the past, present, and future background colors]("./assets/images/colors.png")
 ## App showing that it saves to local storage
-![this is the app with the past, present, and future background colors](./assets/images/saving.png)
+![this is the app with the past, present, and future background colors]("./assets/images/saving.png")
 
 
 ---
