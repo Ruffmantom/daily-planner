@@ -1,9 +1,14 @@
 # daily-planner
 Making a daily planner for a homework project
 
-This project took me a while for my head to wrap around. finally after 4hours of trying to start we got the first few lines of code. Then 5 hours later Blaise and I worked together and figured it out with more code than needed but it worked! 
-![desktop video of saving to local storage](working.mov); 
-<br>I didnt have time to bring this to my website but i will have it up there with my own version of the HTML during break.
+This app uses local storage to save values that are in the text areas and be able to print them back to the text area after a reload or getting back to the app after a while. simply type into the text box and click the save button. it will save what you just typed and if the time passes the hour of the text box that you saved the background color will change.
+
+## App showing the background colors for paste, present and future
+I had to switch the times so that I could capture the functionality
+![this is the app with the past, present, and future background colors](./assets/images/colors.png)
+## App showing that it saves to local storage
+![this is the app with the past, present, and future background colors](./assets/images/saving.png)
+
 
 ---
 ##  License and Copyright 
