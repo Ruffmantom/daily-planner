@@ -1,113 +1,43 @@
 $(document).ready(function () {
-    // code below this
-    var description = $('.description');
-    // display current day
-    var currentDay = $('#currentDay');
-    currentDay.text('Today is ' + moment().format("MMM Do YY"))
+    
+    // grabbing the current day and putting it in that <p> tag
+    $("#currentDay").text(moment());
+    setInterval(function () {
+        $("#currentDay").text(moment());
+    }, 1000);
 
-    // when the button gets clicked
-    $('.saveBtn').on('click', function () {
-        // want it to get the data in the input and save it to a new key
-        generateKey()
-        // Riley Helped me make this way shorter -__- 
-        // var key = $(this).siblings()[1];
-        // // console.log(key);
-        // key = $(key).attr('id')
-        // var comment = $("#" + key).val();
-        // // console.log(key);
-        // localStorage.setItem(key, comment);
-        // comment.val(localStorage.getItem(key))
+    // need to save to local storage
+    $(".saveBtn").on("click", function () {
+        // grabbing the textbox values and saving them to the 
+        localStorage.setItem($(this).parent().attr("id"), $(this).siblings("textarea").val().trim())
     })
 
-    // function printTasks(){
-    //     localStorage.getItem(key, comment);
-    // }
-
-    // function for creating keys with every click
-    function generateKey() {
-        var comment = $.trim($('#task-9').val());
-        if (comment != '') {
-            localStorage.setItem('task-1', comment)
-        }
-        var comment1 = $.trim($('#task-10').val());
-        if (comment1 != '') {
-            localStorage.setItem('task-2', comment1)
-        }
-        var comment2 = $.trim($('#task-11').val());
-        if (comment2 != '') {
-            localStorage.setItem('task-3', comment2)
-        }
-        var comment3 = $.trim($('#task-12').val());
-        if (comment3 != '') {
-            localStorage.setItem('task-4', comment3)
-        }
-        var comment4 = $.trim($('#task-13').val());
-        if (comment4 != '') {
-            localStorage.setItem('task-5', comment4)
-        }
-        var comment5 = $.trim($('#task-14').val());
-        if (comment5 != '') {
-            localStorage.setItem('task-6', comment5)
-        }
-        var comment6 = $.trim($('#task-15').val());
-        if (comment6 != '') {
-            localStorage.setItem('task-7', comment6)
-        }
-        var comment7 = $.trim($('#task-16').val());
-        if (comment7 != '') {
-            localStorage.setItem('task-8', comment7)
-        }
-        var comment8 = $.trim($('#task-17').val());
-        if (comment8 != '') {
-            localStorage.setItem('task-9', comment8)
-        }
-    }
-    // need a function for printing after reload page
-    function print() {
-        $('#task-9').val(localStorage.getItem('task-1'))
-        $('#task-10').val(localStorage.getItem('task-2'))
-        $('#task-11').val(localStorage.getItem('task-3'))
-        $('#task-12').val(localStorage.getItem('task-4'))
-        $('#task-13').val(localStorage.getItem('task-5'))
-        $('#task-14').val(localStorage.getItem('task-6'))
-        $('#task-15').val(localStorage.getItem('task-7'))
-        $('#task-16').val(localStorage.getItem('task-8'))
-        $('#task-17').val(localStorage.getItem('task-9'))
-    }
-    // need function to clear generated keys
-    function clearKeys() {
-        localStorage.clear();
-    }
-
-    // function for updating page 
-    function hoursUpdater() {
-        // print();
+    // making function to check the hours and set the correct background color
+    function checkHour() {
+        // get current hour so I can check it with the time-block
         var currentHour = moment().hours();
-        $('.time-block').each(function () {
-            // console.log('timeblock is working')// ran 9 times cause there are 9 divs with the class of "time-block"
-            // console.log(this) displays 
-            var blockHour = parseInt($(this).attr('id').split('-')[1]);
-
-            // console.log(blockHour);
+        $(".time-block").each(function () {
+            // need to grab the text area id number
+            var blockHour = parseInt($(this).attr("id").split("-")[1]);
+            // gotta get the id for saving to local storage
+            var blockKey = $(this).attr("id");
+            // get the localstorage item
+            var blockDisplay = localStorage.getItem(blockKey)
+            // need to print the saved 
+            $(this).children("textarea").text(blockDisplay)
             if (blockHour < currentHour) {
-                // console.log('Hour is past')
-                $(this).addClass("past");
-
+                $(this).children("textarea").addClass("past");
+            } else if (blockHour == currentHour) {
+                $(this).children("textarea").addClass("present");
             } else if (blockHour > currentHour) {
-                // console.log('Hour is soon')
-                $(this).addClass("future");
-            } else {
-                // console.log('Hour is now')
-                $(this).addClass("present");
+                $(this).children("textarea").addClass("future");
             }
         })
-        //need to clear keys if greater than the day is over
-        if (currentHour <= 8 || currentHour >= 18) {
-            clearKeys()
-        }
-    }
+    };
 
-    hoursUpdater();
-    var interval = setInterval(hoursUpdater, 15000);
-    // dont code below this
+    // need to run the hours updater
+    checkHour();
+
+
 });
+
